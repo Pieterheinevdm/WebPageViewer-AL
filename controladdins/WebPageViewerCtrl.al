@@ -1,10 +1,11 @@
-controladdin WebPageViewerCtrl
+controladdin "ad_WebPageViewerCtrl"
 {
-    Scripts = 
+    Scripts =
         'scripts/WebPageViewerHelper.js',
         'scripts/WebPageViewer.js';
+
     StartupScript = 'scripts/start.js';
-    
+
     RequestedHeight = 320;
     RequestedWidth = 300;
     MinimumHeight = 180;
@@ -16,6 +17,6 @@ controladdin WebPageViewerCtrl
     VerticalStretch = true;
     HorizontalStretch = true;
 
-    event ControlReady();
-    procedure ShowAddress(Address: Text);
+    event ControlAddInReady();
+    procedure Navigate(url: Text[1024]);
 }
