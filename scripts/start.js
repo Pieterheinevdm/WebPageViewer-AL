@@ -1,19 +1,8 @@
-var iframe = window.frameElement;
+(function ($) {
+    $(document).ready(function () {
+        var url = Microsoft.Dynamics.NAV.GetImageResource("images/Callback.html");
+        $("#controlAddIn").load(url);
+    });
+})(jQuery);
 
-iframe.parentElement.style.display = 'flex';
-iframe.parentElement.style.flexDirection = 'column';
-iframe.parentElement.style.flexGrow = '1';
-
-iframe.style.removeProperty('height');
-iframe.style.removeProperty('max-height');
-iframe.style.minHeight = '400px';
-
-iframe.style.flexGrow = '1';
-iframe.style.flexShrink = '1';
-iframe.style.flexBasis = 'auto';
-iframe.style.paddingBottom = '42px';
-
-WebPageViewerHelper.Initialize();
-Microsoft.Dynamics.NAV.InvokeExtensibilityMethod('OnControlAddInReady',[WebPageViewerHelper.GetCallbackURL()]);
-Microsoft.Dynamics.NAV.InvokeExtensibilityMethod('Callback',[WebPageViewerHelper.GetCallbackURL()]);
-Microsoft.Dynamics.NAV.InvokeExtensibilityMethod('DocumentReady',[WebPageViewerHelper.GetCallbackURL()]);
+Microsoft.Dynamics.NAV.InvokeExtensibilityMethod('OnControlAddInReady');

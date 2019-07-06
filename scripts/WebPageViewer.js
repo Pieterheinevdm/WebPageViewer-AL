@@ -99,3 +99,4 @@ var iframe = null,
   defaultSize = "100%",
   iframeHeight = defaultSize,
   iframeWidth = defaultSize,
+  pageTabSize = 20;

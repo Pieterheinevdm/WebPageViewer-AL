@@ -4,13 +4,9 @@ pageextension 50100 "ad_Customer Card Ext." extends "Customer Card"
     {
         addafter(General)
         {
-            group(Addins)
+            part("Web Viewer"; "ad_Web Page Viewer Part")
             {
-                Caption = 'Control AddIn';
-                part("Web Viewer"; "ad_Web Page Viewer Part")
-                {
-                    ApplicationArea = All;
-                }
+                ApplicationArea = All;
             }
         }
     }
