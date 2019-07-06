@@ -6,6 +6,7 @@ page 50102 "ad_Web Viewer Setup"
     DeleteAllowed = false;
     UsageCategory = Administration;
     ApplicationArea = Basic;
+    Caption = 'Web Viewer Setup';
 
     layout
     {

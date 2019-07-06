@@ -1,7 +1,5 @@
 table 50100 "ad_Web Viewer Setup"
 {
-    DataPerCompany = false;
-
     fields
     {
         field(1; Code; Code[10])

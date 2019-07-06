@@ -5,6 +5,8 @@ controladdin "ad_WebPageViewerCtrl"
         'scripts/WebPageViewer.js';
 
     StartupScript = 'scripts/start.js';
+    Images =
+        'images/loader.gif';
 
     RequestedHeight = 320;
     RequestedWidth = 300;
