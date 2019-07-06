@@ -10,9 +10,9 @@ page 50100 "ad_Web Page Viewer Part"
             usercontrol("Web Page Viewer"; ad_WebPageViewerCtrl)
             {
                 ApplicationArea = All;
-                trigger ControlAddInReady()
+                trigger OnControlAddInReady()
                 begin
-                    CurrPage."Web Page Viewer".Navigate(gURL);
+                    InitializeWebViewer();
                 end;
             }
         }
@@ -22,6 +22,14 @@ page 50100 "ad_Web Page Viewer Part"
     begin
         if not (url = '') then
             exit;
+    end;
+
+    local procedure InitializeWebViewer()
+    var
+        WebViewerSetup: Record "ad_Web Viewer Setup";
+    begin
+        WebViewerSetup.GetRecord();
+        CurrPage."Web Page Viewer".Navigate(WebViewerSetup."Web Viewer URL");
     end;
 
     var

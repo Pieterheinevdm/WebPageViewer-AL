@@ -17,6 +17,8 @@ controladdin "ad_WebPageViewerCtrl"
     VerticalStretch = true;
     HorizontalStretch = true;
 
-    event ControlAddInReady();
+    event OnControlAddInReady();
+    event CallBack();
+    event DocumentReady();
     procedure Navigate(url: Text[1024]);
 }
