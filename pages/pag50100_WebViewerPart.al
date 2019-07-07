@@ -29,9 +29,12 @@ page 50100 "ad_Web Page Viewer Part"
         WebViewerSetup: Record "ad_Web Viewer Setup";
     begin
         WebViewerSetup.GetRecord();
+        if WebViewerSetup."Web Viewer URL" = '' then
+            Error(txtErrUrlIsMissing);
         CurrPage."Web Page Viewer".Navigate(WebViewerSetup."Web Viewer URL");
     end;
 
     var
         gURL: Text[1024];
+        txtErrUrlIsMissing: Label 'Web Viewer URL is empty!';
 }
